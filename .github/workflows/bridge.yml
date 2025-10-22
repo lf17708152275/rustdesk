@@ -6,6 +6,9 @@ on:
   workflow_call:
 
 env:
+  PUB_KEY: ${{ secrets.PUB_KEY }}
+  SERVERS: ${{ vars.SERVERS }}
+  API_SERVERS: ${{ vars.API_SERVERS }}
   CARGO_EXPAND_VERSION: "1.0.95"
   FLUTTER_VERSION: "3.22.3"
   FLUTTER_RUST_BRIDGE_VERSION: "1.80.1"
