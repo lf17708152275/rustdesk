@@ -309,6 +309,7 @@ def main():
     else:
         print(f"Failed to update/stage submodule pointer for {sub_path}.")
 
+<<<<<<< HEAD
 def sync_master():
     """
     自动同步master分支
@@ -352,3 +353,7 @@ jobs:
 if __name__ == "__main__":
     main()
     sync_master()
+=======
+if __name__ == "__main__":
+    main()
+>>>>>>> 182c9b25518daf574fd837f3264e584465b42fac

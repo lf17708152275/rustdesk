@@ -35,12 +35,21 @@ env:
   VCPKG_BINARY_SOURCES: "clear;x-gha,readwrite"
   VCPKG_COMMIT_ID: "120deac3062162151622ca4860575a33844ba10b"
   ARMV7_VCPKG_COMMIT_ID: "6f29f12e82a8293156836ad81cc9bf5af41fe836" # 2025.01.13, got "/opt/artifacts/vcpkg/vcpkg: No such file or directory" with latest version
+<<<<<<< HEAD
   VERSION: "1.4.6"
   NDK_VERSION: "r28c"
   ANDROID_SIGNING_KEY: "${{ secrets.ANDROID_SIGNING_KEY }}"
   MACOS_P12_BASE64: "${{ secrets.MACOS_P12_BASE64 }}"
   UPLOAD_ARTIFACT: "${{ inputs.upload-artifact }}"
   SIGN_BASE_URL: "${{ secrets.SIGN_BASE_URL }}-2"
+=======
+  VERSION: "1.4.3"
+  NDK_VERSION: "r27c"
+  ANDROID_SIGNING_KEY: "${{ secrets.ANDROID_SIGNING_KEY }}"
+  MACOS_P12_BASE64: "${{ secrets.MACOS_P12_BASE64 }}"
+  UPLOAD_ARTIFACT: "${{ inputs.upload-artifact }}"
+  SIGN_BASE_URL: "${{ secrets.SIGN_BASE_URL }}"
+>>>>>>> 182c9b25518daf574fd837f3264e584465b42fac
   # for arm64 linux because official Dart SDK does not work
   # vcpkg version: 2025.08.27
   # If we change the `VCPKG COMMIT_ID`, please remember:
