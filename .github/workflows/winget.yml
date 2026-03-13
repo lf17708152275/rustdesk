@@ -1,4 +1,8 @@
 name: Publish to WinGet
+env:
+  PUB_KEY: ${{ secrets.PUB_KEY }}
+  SERVERS: ${{ vars.SERVERS }}
+  API_SERVERS: ${{ vars.API_SERVERS }}
 on:
   release:
     types: [released]

@@ -1,0 +1,27 @@
+name: Sync branches with master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Sync cloud branch
+        run: |
+          git checkout cloud
+          git merge master --no-edit
+          git push origin cloud
+
+      - name: Sync home branch
+        run: |
+          git checkout home
+          git merge master --no-edit
+          git push origin home
