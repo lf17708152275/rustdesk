@@ -1,4 +1,8 @@
 name: Fdroid version file generation
+env:
+  PUB_KEY: ${{ secrets.PUB_KEY }}
+  SERVERS: ${{ vars.SERVERS }}
+  API_SERVERS: ${{ vars.API_SERVERS }}
 
 on:
   workflow_dispatch:
