@@ -1,4 +1,8 @@
 name: Update webpki-roots
+env:
+  PUB_KEY: ${{ secrets.PUB_KEY }}
+  SERVERS: ${{ vars.SERVERS }}
+  API_SERVERS: ${{ vars.API_SERVERS }}
 
 # Weekly refresh of the compiled-in TLS root certificates (the webpki-roots
 # crate, a snapshot of the Mozilla root store). Roots are otherwise frozen at

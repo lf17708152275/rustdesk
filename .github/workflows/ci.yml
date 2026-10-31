@@ -1,11 +1,14 @@
 name: CI
 
 env:
+  PUB_KEY: ${{ secrets.PUB_KEY }}
+  SERVERS: ${{ vars.SERVERS }}
+  API_SERVERS: ${{ vars.API_SERVERS }}
+  VCPKG_BINARY_SOURCES: "clear;x-gha,readwrite"
+  VCPKG_COMMIT_ID: "9e593bb18ea69cc5095e012465dcd675a822ed0d"
 #   MIN_SUPPORTED_RUST_VERSION: "1.46.0"
 #   CICD_INTERMEDIATES_DIR: "_cicd-intermediates"
-  VCPKG_BINARY_SOURCES: "clear;x-gha,readwrite"
   # for multiarch gcc compatibility
-  VCPKG_COMMIT_ID: "9e593bb18ea69cc5095e012465dcd675a822ed0d"
 
 on:
   workflow_dispatch:
